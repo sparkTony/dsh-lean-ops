@@ -1,0 +1,44 @@
+{
+  "name": "dsh-lean-ops",
+  "version": "0.1.0",
+  "description": "Three token-shape fixes for small local models: batched edits, capped reads, and offloaded oversized tool results.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "token-efficiency"
+  ],
+  "license": "MIT",
+  "author": "sparkTony",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sparkTony/dsh-lean-ops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sparkTony/dsh-lean-ops/issues"
+  },
+  "homepage": "https://github.com/sparkTony/dsh-lean-ops#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    }
+  }
+}

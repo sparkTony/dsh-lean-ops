@@ -1,0 +1,21 @@
+# One row on the Plugins page. Every key here is read by apply() in index.js.
+#
+# captureThresholdTokens is deliberately high: paging costs a round, and a round
+# on a 9B is 40-80 seconds. Only results that genuinely do not belong in a
+# 65536-token window get offloaded.
+#
+# Preview budgets are in CHARACTERS. A line-count budget failed live: one pwsh
+# result of 6,728 chars produced a 6,097-char "preview" (9% smaller) because its
+# lines were extremely long.
+- insert:
+    - id: dsh-lean-ops
+      name: dsh-lean-ops
+      config:
+        captureThresholdTokens: 1200
+        previewHeadChars: 2000
+        previewTailChars: 800
+        maxEditsPerCall: 20
+        resultReadLines: 200
+        resultReadMaxChars: 6000
+        spillTtlDays: 7
+        spillRoot: ""

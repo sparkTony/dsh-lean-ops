@@ -1,0 +1,11 @@
+node_modules/
+*.log
+errors.log
+.DS_Store
+Thumbs.db
+
+# 本地调试导出，不属于仓库内容
+/full.txt
+/prev.txt
+/tmp/
+/.dsh/
